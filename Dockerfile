@@ -31,7 +31,8 @@ ENV JENKINS_UC https://updates.jenkins-ci.org
 RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
 
 RUN curl -sSL https://get.docker.com/ | sh
- 
+
+RUN apt-get install -y build-essential  
 # for main web interface:
 EXPOSE 8080
 
