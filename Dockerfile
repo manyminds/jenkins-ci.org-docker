@@ -30,6 +30,8 @@ RUN curl -L http://mirrors.jenkins-ci.org/war-stable/1.596.1/jenkins.war -o /usr
 ENV JENKINS_UC https://updates.jenkins-ci.org
 RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
 
+RUN curl -sSL https://get.docker.com/ | sh
+ 
 # for main web interface:
 EXPOSE 8080
 
