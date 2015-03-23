@@ -31,8 +31,9 @@ ENV JENKINS_UC https://updates.jenkins-ci.org
 RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
 
 RUN curl -sSL https://get.docker.com/ | sh
+RUN curl -sL https://deb.nodesource.com/setup | bash -
 
-RUN apt-get install -y build-essential  
+RUN apt-get install -y build-essential make nodejs
 # for main web interface:
 EXPOSE 8080
 
